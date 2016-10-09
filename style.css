@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato/Lato-Light.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('./fonts/Ubuntu/Ubuntu-Regular.ttf')  format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #363636;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+header {
+    height: 34px;
+    width: 100%;
+    background-color: #333;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 14px;
+    color: #FFF;
+    border-bottom: 1px solid #232323;
+    box-sizing: border-box;
+}
+
+#message {
+    max-width: 250px;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #f08080;
+    padding: 14px 28px;
+}
+
+#app {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#app main {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#app main #app-messages {
+    position: relative;
+    width: 100%;
+}
+
+#app main #app-messages #message {
+    position: absolute;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    opacity: 0;
+    right: -250px;
+    transition: opacity .5s, right .2s;
+}
+
+#app main #app-messages #message.show {
+    opacity: 1;
+    right: 0;
+    transition: opacity .5s, right .2s;
+}
+
+#app main input[type='text'] {
+    outline: none;
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 2px solid #363636;
+    width: 100%;
+    background: #fff;
+    color: inherit;
+    text-align: left;
+    margin-top: 0px;
+    font-size: inherit;
+    text-indent: 18px;
+    -webkit-transition: margin .2s;
+}
+
+#app main #navbar {
+    position: relative;
+}
+
+#app main #navbar i.fa-search {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+#app main input[type='text'].first-search {
+    width: 35%;
+    background: none;
+    border-bottom: 1px solid #f08080;
+    color: #f08080;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 250px;
+    font-size: 1.3em;
+    text-indent: 0;
+    -webkit-transition: margin .3s;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer #footer-options {
+    background: none;
+    cursor: default;
+    border: none;
+    padding: 15px;
+    float: right;
+    width: 24px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    text-align: right;
+    transition: all .4s;
+}
+
+footer #footer-options:focus {
+    outline: none;
+}
+
+footer #footer-options.open {
+    background: #f08080;
+    width: 150px;
+    transition: width .4s;
+}
+
+footer #footer-options i.fa {
+    color: #f08080;
+    font-size: 24px;
+    transition: all .4s;
+}
+
+footer #footer-options i.fa {
+    display: none;
+}
+
+footer #footer-options i.fa-cog {
+    display: inline-block;
+    float: left;
+}
+
+footer #footer-options.open i.fa {
+    color: #363636;
+    display: inline;
+    font-size: 28px;
+}
+
+footer #footer-options i.fa-cog:active {
+    -webkit-transform: rotate(-90deg)
+}
+
+footer #footer-options i.fa:hover {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+footer #footer-options.open i.fa:hover {
+    color: #393939;
+}
+
+footer #footer-options.open i.fa-cloud.activate {
+    color: cornsilk;
+    transition: color .2s;
+}
+
+footer #footer-messages {
+    width: 100%;
+    position: relative;
+}
+
+footer #footer-messages #message {
+    opacity: 0;
+    position: absolute;
+    bottom: -150px;
+    right: 0px;
+    left: 0px;
+    transition: opacity .5s, bottom .2s;
+}
+
+footer #footer-messages #message.show {
+    opacity: 1;
+    bottom: -25px;
+    right: 0;
+    left: 0;
+    transition: opacity .5s, bottom .2s;
+}

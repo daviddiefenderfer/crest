@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crest</title>
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <span>cReST</span>
+    </header>
+    <section id="app">
+        <main>
+            <div id="navbar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text"
+                       id="navbar-search"
+                       class="first-search"
+                       placeholder="ex. http://www.google.com"
+                       onchange="searchOnChange()"
+                       autofocus>
+            </div>
+            <div id="app-messages">
+                <div id="message"></div>
+            </div>
+            <webview id="webview" autosize="on" style="display:inline-flex; height: 100%; width:100%;"></webview>
+        </main>
+        <footer>
+            <div id="footer-options"><i class="fa fa-cog" onclick="showOptions()" aria-hidden="true"></i>
+                <i class="fa fa-cloud" aria-hidden="true" onclick="toggleHTTPCapture()"></i>
+            </div>
+            <div id="footer-messages">
+                <div id="message"></div>
+            </div>
+        </footer>
+    </section>
+<script src="renderer.js"></script>
+</body>
+</html>

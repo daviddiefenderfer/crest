@@ -1,0 +1,16 @@
+{
+  "name": "crest",
+  "version": "0.1.0",
+  "description": "Crest",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "David Diefenderfer",
+  "license": "ISC",
+  "dependencies": {
+    "@cycle/dom": "^12.2.5",
+    "@cycle/xstream-run": "^3.1.0",
+    "xstream": "^6.4.1"
+  }
+}
