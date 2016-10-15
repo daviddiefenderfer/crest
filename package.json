@@ -11,6 +11,7 @@
   "dependencies": {
     "@cycle/dom": "^12.2.5",
     "@cycle/xstream-run": "^3.1.0",
+    "electron": "^1.4.3",
     "xstream": "^6.4.1"
   }
 }
